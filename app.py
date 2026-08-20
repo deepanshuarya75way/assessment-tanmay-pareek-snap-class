@@ -1,6 +1,5 @@
 import streamlit as st
 
-from src.components.dialog_auto_enroll import auto_enroll_dialog
 
 
 def main():
@@ -32,6 +31,8 @@ def main():
             st.session_state.get("is_logged_in")
             and st.session_state.get("user_role") == "student"
         ):
+            from src.components.dialog_auto_enroll import auto_enroll_dialog
+
             auto_enroll_dialog(join_code)
             return
 
