@@ -43,7 +43,7 @@ def get_trained_model():
     y = []
 
 
-    student_db = get_all_students()
+    student_db = get_all_students() 
 
     if not student_db:
         return None
